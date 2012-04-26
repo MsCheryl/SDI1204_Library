@@ -136,22 +136,33 @@ console.log(convertNum("224"));//"224" will be converted to 224
         
 //Total numbers in an array
     
-  var array = [12, 24, 36, 48, 50],
-      sum = 0,
-      prod = 1,
-        i;
-        for (i = 0; i < array.length; i += 1) {
-        sum += array[i];
-        prod *= array[i];
-        }
-        console.log (sum + ' ' + prod);
-        
-var myArray = {};
-["Jalen","Mykal","Dominic"].each(function(name,index){
-	this[name] = index;
-},myArray);
+var arr = ['a',12,'b',24,'c',36,'d',48,'e',50];
 
-console.log(myArray)
+var sum = 0;
+for (var i=0; i<arr.length; i++) {
+  if (!isNaN(parseInt(arr[i]))) { sum += arr[i]; }
+}
+console.log(sum);
 
+//Array with key
+
+		var kids = [{
+				name: "Jalen",
+				age:  19
+		},		 {
+				name:  "Mykal",
+				age:     18
+		},		 {
+				name:  "Dominic",
+				age:     16
+		}];
+				kids.sort (function(a, b){ 
+					return a.age - b.age;
+		});
+					
+          console.log(kids);          
+
+
+/*Make up Work from Week 3.  I was unable to get GIT to work, and received a 0, hopefully I can get some of that credit back by including this work this week.*/
 
 
