@@ -34,32 +34,27 @@ console.log(myEmail("mscheryl@fullsail"));//true
 
 //Validate URL
 
-var myUrl = function(userUrl) {
-				var urlValidate1 = url.indexOf ("http://"),//checks to see if  URL begins with http://
-					urlValidate2 = url.indexOf ("https://");//checks to see if URL begins with https://
-					  	
-					if(urlValidate1 != -1 || urlCheck2 != -1) {
-					return console.log(userUrl);//if they validate, return the specified URL
-					} else {
-					return console.log("http://" + url);//if not return "false"
-					}
-    	}
-    
-    	myUrl("whitehouse");  //false
-    	myUrl("fullsail.com");//true
+var theUrl = function(userUrl) {
+	var urlValidate1 = userUrl.indexOf("http://"), urlValidate2 = userUrl.indexOf("https://");
+
+	if(urlValidate1 != -1 || urlCheck2 != -1) {
+		return console.log(userUrl);
+	} else {
+		return console.log("false");
+	}
+};
+
+theUrl("http://fullsail.edu");//true
+
 
 
 
 //Title Case
-string.prototype.titleCase = function() {
-	var myString = " ", eachWord = this.split(" ");
-	for(characters in eachWord) {myString += '  ' + eachWord[characters].subsr(0, 1), toUpperCase() + eachWord[characters].substr(1, eachWord[characters].length);
-	}
-	return myString;
+function titleCase(str)
+{
+	return str.replace(/((^|\s)[a-z])/g, function(match){return match.toUpperCase();}); 
 }
-var title = "mobile media development"
-title = title.titleCase();
-console.log(title);//This script will display as "Mobile Media Development"
+console.log(titleCase('mobile media development'));
   
 
 //String Seperator
@@ -70,7 +65,50 @@ function newSep() {
 };
 
 var myKids = "Jalen, Mykal, Dominic"
-console.log(newSep());//Jalen/Mykal/Dominic  
+console.log(newSep());//Jalen/Mykal/Dominic
 
+
+//Number Decimal
+
+
+var formatNumber = function (theNumber) {
+					var decimalPlace = Math.round(theNumber*100)/100,
+						  fixNum = decimalPlace.toFixed(2);//fixes the decimal places to 2 places 
+					return console.log(fixNum);
+				};
+		console.log(formatNumber(2.333));  //2.33
+		console.log(formatNumber(2));  //2.00
+		console.log(formatNumber(1)); //1.00
+		
+
+//Fuzzy Match Number:  is the number above or below a number within a certain percent?
+
+var fuzzyMath = function( ){
+var num = 100; //declared initial number
+var numMatch = 50;
+var numPercent = num/100;//divided by 100 to find the percent
+var numDifference = num - numMatch; 
+var numAnswer = " ";
+		if (numDifference <0){ // 50<0
+			numAnswer = "negative"//based off of defined var, this would be correct
+		}else{
+			numAnswer = "positive";
+		};
+		if (numAnswer ==="negative"){
+			console.log (numMatch + "is more than" + num +"."); //appropriate output
+		}else{
+			console.log (numMatch + "is less than" + num + ".");
+		}
+};
+
+//Find the difference between two dates
+function dateDiff(){
+	var firstDate = new Date("01/01/2001");
+	var lastDate = new Date ("12/12/2012");
+	var theDate = 1000*60*60*24;
+	console.log(Math.ceil((lastDate.getTime()-firstDate.getTime())/theDate) + " " + "hours.")
+};
+
+dateDiff();
 
 
