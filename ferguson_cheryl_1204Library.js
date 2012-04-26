@@ -111,6 +111,47 @@ console.log (fuzzyMath());
 	var diffDays = Math.ceil(diffMs/dateMs);
 	
 	console.log(diffDays +" days between" + firstDate + lastDate +".");
+	
+//String
+var convertNum = function(numString) {
+	var numValue = parseInt(numString);
+	return (numValue);
+}
+console.log(convertNum("224"));//"224" will be converted to 224
+
+
+//Array Max Min Number Given
+       
+ var numbers = function smNum(threshold) {
+       			for (var i = 0; i < myNumbers.length; i ++) {
+       				if (myNumbers [i ] > threshold) {
+       					return myNumbers [i];
+       					break;
+       				}
+       			}
+       		};
+        
+        var myNumbers = [12,24,36,48,50,62];
+        console.log(numbers(16));
+        
+//Total numbers in an array
+    
+  var array = [12, 24, 36, 48, 50],
+      sum = 0,
+      prod = 1,
+        i;
+        for (i = 0; i < array.length; i += 1) {
+        sum += array[i];
+        prod *= array[i];
+        }
+        console.log (sum + ' ' + prod);
+        
+var myArray = {};
+["Jalen","Mykal","Dominic"].each(function(name,index){
+	this[name] = index;
+},myArray);
+
+console.log(myArray)
 
 
 
