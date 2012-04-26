@@ -95,20 +95,22 @@ var numAnswer = " ";
 			numAnswer = "positive";
 		};
 		if (numAnswer ==="negative"){
-			console.log (numMatch + "is more than" + num +"."); //appropriate output
+			console.log (numMatch +" "+ "is more than" +" "+num +"."); //appropriate output
 		}else{
-			console.log (numMatch + "is less than" + num + ".");
+			console.log (numMatch +" " +"is less than" +" "+ num + ".");
 		}
 };
+console.log (fuzzyMath());
 
 //Find the difference between two dates
-function dateDiff(){
-	var firstDate = new Date("01/01/2001");
-	var lastDate = new Date ("12/12/2012");
-	var theDate = 1000*60*60*24;
-	console.log(Math.ceil((lastDate.getTime()-firstDate.getTime())/theDate) + " " + "hours.")
-};
 
-dateDiff();
+	var firstDate = new Date("2012, 1, 1");
+	var lastDate = new Date ("2012, 1, 31");
+	var diffMs = firstDate.getTime() - lastDate.getTime();
+	var dateMs = 1000*60*60*24;
+	var diffDays = Math.ceil(diffMs/dateMs);
+	
+	console.log(diffDays +" days between" + firstDate + lastDate +".");
+
 
 
