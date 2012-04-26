@@ -95,9 +95,9 @@ var numAnswer = " ";
 			numAnswer = "positive";
 		};
 		if (numAnswer ==="negative"){
-			console.log (numMatch +" "+ "is more than" +" "+num +"."); //appropriate output
+			console.log (numMatch +" "+ "is more than" +" "+num +"."); 
 		}else{
-			console.log (numMatch +" " +"is less than" +" "+ num + ".");
+			console.log (numMatch +" " +"is less than" +" "+ num + ".");//appropriate output
 		}
 };
 console.log (fuzzyMath());
@@ -164,5 +164,4 @@ console.log(sum);
 
 
 /*Make up Work from Week 3.  I was unable to get GIT to work, and received a 0, hopefully I can get some of that credit back by including this work this week.*/
-
 
