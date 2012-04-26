@@ -1,6 +1,4 @@
-
 //alert("JavaScript works!");
-
 //String- Valid Phone Number
 
 var myPhone = function(phone) {
@@ -40,26 +38,16 @@ var myUrl = function(userUrl) {
 				var urlValidate1 = url.indexOf ("http://"),//checks to see if  URL begins with http://
 					urlValidate2 = url.indexOf ("https://");//checks to see if URL begins with https://
 					  	
-						if(urlValidate1 != -1 || urlCheck2 != -1) {
-						return (userUrl);//if they validate, return the specified URL
+					if(urlValidate1 != -1 || urlCheck2 != -1) {
+					return console.log(userUrl);//if they validate, return the specified URL
 					} else {
-						return false;//if not return "false"
+					return console.log("http://" + url);//if not return "false"
 					}
     	}
     
-    	console.log("whitehouse");  //false
+    	myUrl("whitehouse");  //false
+    	myUrl("fullsail.com");//true
 
-var myUrl = function checkUrl(theUrl){
-        
-        if(theUrl.value.match(/^(http|ftp)\:\/\/\w+([\.\-]\w+)*\.\w{2,4}(\:\d+)*([\/\.\-\?\&\%\#]\w+)*\/?$/i) ||
-            theUrl.value.match(/^mailto\:\w+([\.\-]\w+)*\@\w+([\.\-]\w+)*\.\w{2,4}$/i)){
-            return true;
-          
-        } else {
-            alert("Wrong address.");
-            return false;
-            
-console.log (myUrl("whitehouse"));//false
 
 
 //Title Case
