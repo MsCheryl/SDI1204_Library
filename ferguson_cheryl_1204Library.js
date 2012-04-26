@@ -60,7 +60,17 @@ string.prototype.titleCase = function() {
 var title = "mobile media development"
 title = title.titleCase();
 console.log(title);//This script will display as "Mobile Media Development"
-    
+  
+
+//String Seperator
+function newSep() {
+	var fwdSlash = " / "
+	var kidsSep = myKids.replace(/,/g, fwdSlash);
+	return kidsSep;
+};
+
+var myKids = "Jalen, Mykal, Dominic"
+console.log(newSep());//Jalen/Mykal/Dominic  
 
 
 
